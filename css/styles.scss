@@ -1,0 +1,162 @@
+// Variables
+$white: #fff;
+$darkblue: #264488;
+$blue: #2639C7;
+$lightblue: #b7daf9;
+$black: #07090d;
+$grey: #818599;
+$lightgrey: #aab7cf;
+$basicbg: #e6ecf4;
+$probg: #2639C7;
+
+// mixin
+
+@mixin button{
+    margin-top: 20px;
+    padding: 12px;
+    width: 80%;
+    border: none;
+    font-size: 14px;
+    border-radius: 26px;
+}
+
+@mixin plan{
+    padding: 20px 20px;
+    width: 80%;
+    border-radius: 30px;
+    h3{
+        padding: 0 0 8px 0;
+    }
+    h4{
+        display: inline;
+        font-weight: 600;
+    }
+    h5{
+        display: inline;
+    }
+    ul{
+        padding: 16px 0 8px 0;
+    }
+    li{
+        padding: 8px 0;
+        list-style-type: none;
+    }
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import '_mq';
+// container
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 100px;
+    background-color: $white;
+    font-family: Montserrat;
+
+    @include mediaQuery(760px){
+        grid-template-columns: 1fr;
+    }
+}
+
+.save{
+    background-color: $lightblue;
+    border-radius: 12px;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+            font-size: 36px;
+            font-weight: 600;
+            color: $black;
+        }
+        .bluetext{
+            color: $darkblue;
+            font-weight: 400;
+            padding: 0 0 20px 0;
+        }
+        p{
+            font-size: 14px;
+            width: 80%;
+            color: $darkblue;
+            padding: 0 0 40px 0;
+        }
+    }
+    .review{
+        display: flex;
+        justify-content: center;
+    }
+    img{
+        width: 80%;
+        border-radius: 24px;
+    }
+}
+
+.plans{
+    margin-left: 24px;
+    display: grid;
+    grid-template-rows: 1fr 2fr;  
+    padding: 44px 0 10px 0; 
+    
+    .text{
+        h2{
+            color: $grey;
+            font-weight: 400;
+        }
+    }
+
+    .planblock{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @include mediaQuery(760px){
+            grid-template-columns: 1fr;
+            grid-gap: 29px;
+        }
+        .plan{
+            @include plan;   
+            button{
+                @include button;
+            }
+        }
+        .basic{
+            background-color: $basicbg;
+            .dollar{
+                color: $grey;
+            }
+            h5{
+                color: $grey;
+            }
+            button{
+                background-color: $blue;
+                color: $white;
+            }
+        }
+
+        .pro{
+            background-color: $probg;
+            color: $white;
+            .dollar{
+                color: $lightgrey;
+            }
+            h5{
+                color: $lightgrey;
+            }
+            button{
+                background-color: $white;
+                color: $blue;
+            }
+        }
+    }
+}

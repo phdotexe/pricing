@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  padding: 100px;
+  background-color: #fff;
+  font-family: Montserrat;
+}
+
+@media screen and (max-width: 760px) {
+  .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.save {
+  background-color: #b7daf9;
+  border-radius: 12px;
+  padding: 20px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.save .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.save .text h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #07090d;
+}
+
+.save .text .bluetext {
+  color: #264488;
+  font-weight: 400;
+  padding: 0 0 20px 0;
+}
+
+.save .text p {
+  font-size: 14px;
+  width: 80%;
+  color: #264488;
+  padding: 0 0 40px 0;
+}
+
+.save .review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.save img {
+  width: 80%;
+  border-radius: 24px;
+}
+
+.plans {
+  margin-left: 24px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 2fr;
+      grid-template-rows: 1fr 2fr;
+  padding: 44px 0 10px 0;
+}
+
+.plans .text h2 {
+  color: #818599;
+  font-weight: 400;
+}
+
+.plans .planblock {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 760px) {
+  .plans .planblock {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 29px;
+  }
+}
+
+.plans .planblock .plan {
+  padding: 20px 20px;
+  width: 80%;
+  border-radius: 30px;
+}
+
+.plans .planblock .plan h3 {
+  padding: 0 0 8px 0;
+}
+
+.plans .planblock .plan h4 {
+  display: inline;
+  font-weight: 600;
+}
+
+.plans .planblock .plan h5 {
+  display: inline;
+}
+
+.plans .planblock .plan ul {
+  padding: 16px 0 8px 0;
+}
+
+.plans .planblock .plan li {
+  padding: 8px 0;
+  list-style-type: none;
+}
+
+.plans .planblock .plan button {
+  margin-top: 20px;
+  padding: 12px;
+  width: 80%;
+  border: none;
+  font-size: 14px;
+  border-radius: 26px;
+}
+
+.plans .planblock .basic {
+  background-color: #e6ecf4;
+}
+
+.plans .planblock .basic .dollar {
+  color: #818599;
+}
+
+.plans .planblock .basic h5 {
+  color: #818599;
+}
+
+.plans .planblock .basic button {
+  background-color: #2639C7;
+  color: #fff;
+}
+
+.plans .planblock .pro {
+  background-color: #2639C7;
+  color: #fff;
+}
+
+.plans .planblock .pro .dollar {
+  color: #aab7cf;
+}
+
+.plans .planblock .pro h5 {
+  color: #aab7cf;
+}
+
+.plans .planblock .pro button {
+  background-color: #fff;
+  color: #2639C7;
+}
+/*# sourceMappingURL=styles.css.map */
