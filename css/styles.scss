@@ -104,6 +104,7 @@ $probg: #2639C7;
     }
 }
 
+
 .plans{
     margin-left: 24px;
     display: grid;
@@ -120,10 +121,12 @@ $probg: #2639C7;
     .planblock{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        //include media query
         @include mediaQuery(760px){
             grid-template-columns: 1fr;
             grid-gap: 29px;
         }
+        //include plan mixin
         .plan{
             @include plan;   
             button{
